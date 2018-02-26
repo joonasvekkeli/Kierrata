@@ -4,13 +4,12 @@ new 1 ja new 2 tiedostoissa on toimiva kartta, jollaisen haluamme.
 Kun yritämme lisätä new 2:sen koodia www-kansiossa olevaan map.html tiedostoon, lopputulos on tyhjä ruutu (screenshot 1).
 
 Ongelan korjausyritykset:
-StackOverflowsta ja Googlesta emme ole löytäneet ratkaisuja. Ohessa ongelmaamme lähinnä löytämämme linkit:
-
-https://stackoverflow.com/questions/47556829/leaflet-blank-map-on-phonegap
+StackOverflowsta ja Googlesta emme ole löytäneet ratkaisuja. Ongelmaamme lähinnä löytämämme artikkelit
+https://stackoverflow.com/questions/47556829/leaflet-blank-map-on-phonegap, ja
 https://stackoverflow.com/questions/14778755/phonegap-leaflet-jquery-mobile
-Nämä eivät auttaneet meitä.
+eivät auttaneet meitä.
 
-Emme löytäneet kyseiseen koodiin liittyviä virheilmoituksia.
+Emme löytäneet kyseiseen koodiin liittyviä virheilmoituksia konsolista.
 
 Console:
 Content Security Policy: Sivuston asetukset estivät resurssin lataamisen osoitteesta self ("default-src http://192.168.10.45:3000 data: gap: https://ssl.gstatic.com 'unsafe-eval'"). Source: //
