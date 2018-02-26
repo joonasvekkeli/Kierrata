@@ -1,0 +1,11 @@
+Ongelman luonti:
+
+new 1 ja new 2 tiedostoissa on toimiva kartta, jollaisen haluamme.
+Kun yritämme lisätä samaa koodia www-kansiossa olevaan map.html tiedostoon, lopputulos on tyhjä ruutu (screenshot 1).
+
+Ongelan korjausyritykset:
+StackOverflowsta ja Googlesta emme ole löytäneet ratkaisuja. Ohessa ongelmaamme lähinnä löytämämme linkit:
+
+https://stackoverflow.com/questions/47556829/leaflet-blank-map-on-phonegap
+https://stackoverflow.com/questions/14778755/phonegap-leaflet-jquery-mobile
+Nämä eivät auttaneet meitä.
