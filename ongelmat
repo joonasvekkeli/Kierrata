@@ -9,3 +9,26 @@ StackOverflowsta ja Googlesta emme ole löytäneet ratkaisuja. Ohessa ongelmaamm
 https://stackoverflow.com/questions/47556829/leaflet-blank-map-on-phonegap
 https://stackoverflow.com/questions/14778755/phonegap-leaflet-jquery-mobile
 Nämä eivät auttaneet meitä.
+
+Emme löytäneet kyseiseen koodiin liittyviä virheilmoituksia.
+
+Console:
+Content Security Policy: Sivuston asetukset estivät resurssin lataamisen osoitteesta self ("default-src http://192.168.10.45:3000 data: gap: https://ssl.gstatic.com 'unsafe-eval'"). Source: //
+// Reload the app if server detects l....
+192.168.10.45:3000:118
+Content Security Policy: Sivuston asetukset estivät resurssin lataamisen osoitteesta self ("default-src http://192.168.10.45:3000 data: gap: https://ssl.gstatic.com 'unsafe-eval'"). Source: (function(window) {
+    var socket = io(....
+192.168.10.45:3000:154
+Content Security Policy: Sivuston asetukset estivät resurssin lataamisen osoitteesta self ("default-src http://192.168.10.45:3000 data: gap: https://ssl.gstatic.com 'unsafe-eval'"). Source: //
+// Proxy
+///
+// Intercept XHR calls t....
+192.168.10.45:3000:192
+Content Security Policy: Sivuston asetukset estivät resurssin lataamisen osoitteesta self ("default-src http://192.168.10.45:3000 data: gap: https://ssl.gstatic.com 'unsafe-eval'"). Source: //
+// Push notification
+//
+(function() {....
+192.168.10.45:3000:220
+Error: exec proxy not found for :: StatusBar :: _ready
+cordova.js:989:9
+Device is ready!
