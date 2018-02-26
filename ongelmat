@@ -1,7 +1,7 @@
 Ongelman luonti:
 
 new 1 ja new 2 tiedostoissa on toimiva kartta, jollaisen haluamme.
-Kun yritämme lisätä samaa koodia www-kansiossa olevaan map.html tiedostoon, lopputulos on tyhjä ruutu (screenshot 1).
+Kun yritämme lisätä new 2:sen koodia www-kansiossa olevaan map.html tiedostoon, lopputulos on tyhjä ruutu (screenshot 1).
 
 Ongelan korjausyritykset:
 StackOverflowsta ja Googlesta emme ole löytäneet ratkaisuja. Ohessa ongelmaamme lähinnä löytämämme linkit:
