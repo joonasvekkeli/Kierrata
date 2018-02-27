@@ -3,14 +3,7 @@ Ongelman luonti:
 new 1 ja new 2 tiedostoissa on toimiva kartta, jollaisen haluamme.
 Kun yritämme lisätä new 2:sen koodia www-kansiossa olevaan map.html tiedostoon, lopputulos on tyhjä ruutu (screenshot 1).
 
-EDIT: loin minimiapplikaation (kartta.zip) new 2:sen koodilla, lopputulos on screenshot 2 ja screenshot 3. Lisäsin myös
-<access origin="*" subdomains="true" /> config.xml:ään. 
-
-Console minimiapplikaatiolle:
-A Geolocation request can only be fulfilled in a secure context.                                leaflet.js:5:35282
-Loading failed for the <script> with source “http://192.168.10.45:3000/cordova_plugins.js”.
-
-Vaikuttaisi tosiaan whitelist-ongelmalta, mutta en yksinään saa riittävää ymmärrystä aiheesta.
+EDIT: loin minimiapplikaation (kartta.zip) new 2:sen koodilla ja paikallisilla leaflet-tiedostoilla. Lopputulos on screenshot 2 ja 3.
 
 Ongelan korjausyritykset:
 StackOverflowsta ja Googlesta emme ole löytäneet ratkaisuja. Ongelmaamme lähinnä löytämämme artikkelit
