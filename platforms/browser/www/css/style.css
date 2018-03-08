@@ -1,0 +1,118 @@
+h1, h2, h3, h4, h5, h6, p, ul{
+	font-family:Roboto, sans-serif;
+	font-weight:lighter;
+}
+#appbar{
+	background-color:#9acd9c;
+	height:8vh;
+	min-height:50px;
+	width:100%;
+}
+#sidebar{
+	position:absolute;
+	top:0px;
+	background:white;
+	border:1px solid white;
+	height:100vh;
+	width:75vw;
+	display:none;
+}
+#roori{
+	width:55%;
+	height:55%;
+}
+#imu{
+	margin-top:30px;
+	width:55%;
+	height:55%;
+}
+#rode{
+	margin-top:30px;
+	width:55%;
+	height:55%;
+}
+#sidebartitle{
+	text-align:right;
+	margin-right:20px;
+	
+}
+#sidebartitle2{
+	text-align:center;
+}
+#backtomenu{
+	margin-top:15px;
+	margin-left:20px;
+	float:left;
+}
+.arrow{
+	width:35px;
+	height:35px;
+}
+.infoarrow{
+	padding:10px;
+}
+#infotext{
+	margin-left:20px;
+	margin-right:20px;
+}
+.button{
+	border:none;
+	background:none;
+}
+#menuicon{
+	width:5vw;
+	max-width:40px;
+	height:30px;
+	padding:10px;
+}
+.three{
+	width:33%;
+}
+#title{
+	text-align:center;
+	color:white;
+}
+#toolbar{
+	background-color:#9acd9c;
+	height:8vh;
+	min-height:50px;
+	width:100%;
+}
+.two{
+	width:50%;
+	text-align:center;
+}
+.white{
+	color:white;
+}
+#info{
+	width:100%;
+}
+.infobutton{
+	width:80%;
+	padding:10px;
+	margin-top:10px;
+	border:2px #9acd9c solid;
+	background:none;
+	color:#9acd9c
+}
+#mapid{
+	height:78vh;
+	display:none;
+}
+.center{
+	text-align:center;
+}
+#paperi{
+	display:none;
+}
+#back{
+	text-align:center;
+	width:100%;
+	padding:10px;
+	margin-top:10px;
+	border:2px #9acd9c solid;
+	background:none;
+	color:#9acd9c
+}
+
