@@ -78,6 +78,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	height:30px;
 	padding:10px;
 }
+#menubutton:hover{
+	background:#94db8a;
+	border-radius:10px;
+}
 .three{
 	width:33%;
 }
@@ -90,6 +94,12 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	height:8vh;
 	min-height:50px;
 	width:100%;
+}
+#toolbar button{
+	width:100%;
+}
+#materialbutton{
+	background:#94db8a;
 }
 .two{
 	width:50%;
@@ -109,6 +119,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	background:none;
 	color:#9acd9c
 }
+.infobutton:hover{
+	background:#94db8a;
+	color:white;
+}
 #mapid{
 	height:78vh;
 	display:none;
@@ -127,5 +141,9 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	border:2px #9acd9c solid;
 	background:none;
 	color:#9acd9c
+}
+.back:hover{
+	background:#94db8a;
+	color:white;
 }
 

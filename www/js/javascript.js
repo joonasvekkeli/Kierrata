@@ -5,6 +5,8 @@
         $("#info").hide("fast");
 		$("#mapid").show("fast");
 		$(".infoscreen").hide("fast");
+		$("#mapbutton").css("background", "#94db8a");
+		$("#materialbutton").css("background", "#9acd9c");
     });
 	$( "#mapbutton" ).one( "click", function() {
 		setTimeout(function() { alert("Jos kartta ei näy kunnolla, kokeile kääntää laitteen näyttö sivusuuntaan, ja sitten takaisin."); }, 1000);
@@ -13,8 +15,31 @@
         $("#info").show("fast");
 		$("#mapid").hide("fast");
 		$(".infoscreen").hide("fast");
+		$("#mapbutton").css("background", "#9acd9c");
+		$("#materialbutton").css("background", "#94db8a");
     });
-
+// Infoscreen backbutton
+		$(".infoarrow").click(function(){
+        $(".infoscreen").hide("fast");
+		$("#info").show("fast");
+    });
+// Open map from infoscreen
+		$(".back").click(function(){
+        $("#mapid").show("fast");
+		$(".infoscreen").hide("fast");
+		$("#mapbutton").css("background", "#94db8a");
+		$("#materialbutton").css("background", "#9acd9c");
+    });
+// Hamburger button
+		$("#menubutton").click(function(){
+        $("#sidebar").show("fast");
+		$("#mapid").css("z-index", "-1");
+    });
+// Sidescreen exit
+		$("#backtomenu").click(function(){
+        $("#sidebar").hide("fast");
+		$("#mapid").css("z-index", "1");
+    });
 // Individual infoscreens start
 	$("#biobutton").click(function(){
         $("#bio").show("fast");
@@ -61,26 +86,6 @@
 		$("#info").hide("fast");
     });
 // Individual infoscreens end
-// Infoscreen backbutton
-		$(".infoarrow").click(function(){
-        $(".infoscreen").hide("fast");
-		$("#info").show("fast");
-    });
-// Open map from infoscreen
-		$(".back").click(function(){
-        $("#mapid").show("fast");
-		$(".infoscreen").hide("fast");
-    });
-// Hamburger button
-		$("#menubutton").click(function(){
-        $("#sidebar").show("fast");
-		$("#mapid").css("z-index", "-1");
-    });
-// Sidescreen exit
-		$("#backtomenu").click(function(){
-        $("#sidebar").hide("fast");
-		$("#mapid").css("z-index", "1");
-    });
 });
 
 //Map
