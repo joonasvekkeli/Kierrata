@@ -36,51 +36,55 @@
 	
 <!-- section sidebar -->
 	<div id="sidebar">
-	<button class="button" id="backtomenu"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<div id="sidebartop">
+	<button class="button" id="backtomenu"><img src="images/Arrow_white.png " alt="Takaisin" class="arrow"> </button>
 	<h2 id="sidebartitle">Kierrätä</h2>
 	<br>
 	<p id="infotext">Kierrätä-sovelluksen tehtävänä on tukea arkipäivän kierrätystä. Löydät lähimmät pisteesi ja tietoa materiaalikierrätyksestä.</p>
 	<br>
+	</div>
+	<div id="sidebarbottom">
 	<h3 id="sidebartitle2">Yhteistyössä:</h3>
 	<button class="button" onclick="location.href='http://jatkasaarenroori.fi/'" type="button"><img src="images/roori.png" id="roori" alt="Jätkäsaaren Rööri"></button>
 	<button class="button" onclick="location.href='http://kalasatamanimu.fi/'" type="button"><img src="images/imu.png" id="imu" alt="Kalasataman Imu"></button>
 	<button class="button" onclick="location.href='http://rode.fi/'" type="button"><img src="images/Rode.png" id="rode" alt="Kruunuvuorenrannan Rode"></button>
 	</div>
+	</div>
 	
 <!-- section 1 -->
 	<table id="info">
 	<tr>
-	<td class="two"><button class="infobutton">Biojäte</button>
+	<td class="two"><button class="infobutton" id="biobutton">Biojäte</button>
 	</td>
-	<td class="two"><button class="infobutton">Sekajäte</button>
+	<td class="two"><button class="infobutton" id="sekabutton">Sekajäte</button>
 	</td>
 	</tr>
 	<tr>
-	<td class="two"><button class="infobutton">Kartonki</button>
+	<td class="two"><button class="infobutton" id="kartonkibutton">Kartonki</button>
 	</td>
 	<td class="two"><button class="infobutton" id="papeributton">Paperi</button>
 	</td>
 	</tr>
 	<tr>
-	<td class="two"><button class="infobutton">Metalli</button>
+	<td class="two"><button class="infobutton" id="metallibutton">Metalli</button>
 	</td>
-	<td class="two"><button class="infobutton">Muovi</button>
-	</td>
-	</tr>
-	<tr>
-	<td class="two"><button class="infobutton">Lasi</button>
-	</td>
-	<td class="two"><button class="infobutton">Sähkölaitteet</button>
+	<td class="two"><button class="infobutton" id="muovibutton">Muovi</button>
 	</td>
 	</tr>
 	<tr>
-	<td class="two"><button class="infobutton">Tekstiili</button>
+	<td class="two"><button class="infobutton" id="lasibutton">Lasi</button>
 	</td>
-	<td class="two"><button class="infobutton">Vaarallinen jäte</button>
+	<td class="two"><button class="infobutton" id="sähkbutton">Sähkölaitteet</button>
 	</td>
 	</tr>
 	<tr>
-	<td class="two"><button class="infobutton">Puutarhajäte</button>
+	<td class="two"><button class="infobutton" id="tekstiilibutton">Tekstiili</button>
+	</td>
+	<td class="two"><button class="infobutton" id="vaarabutton">Vaarallinen jäte</button>
+	</td>
+	</tr>
+	<tr>
+	<td class="two"><button class="infobutton" id="puutarhabutton">Puutarhajäte</button>
 	</td>
 	<td class="two">
 	</td>
@@ -89,6 +93,82 @@
 	
 <!-- section 2 -->
 	<div id="mapid"></div>
+	
+<!-- section biojäte -->
+	<div id="bio" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Biojäte</h2>
+	<h3 class="center">Mitä biojätteeseen saa laittaa</h3>
+	<ul>
+	<li>hedelmien ja vihannesten kuoret</li>
+	<li>ruoantähteet</li>
+	<li>kalanruodot, luut</li>
+	<li>jähmettyneet rasvat</li>
+	<li>kahvin ja teen porot, teepussit ja suodatinpaperit</li>
+	<li>talouspaperit, lautasliinat ja nenäliinat</li>
+	<li>kasvinosat ja kuihtuneet kukat</li>
+	<li>lemmikkieläinten puupohjaiset kuivikkeet</li>
+	<h4>Valuta ylimääräinen neste pois ruuantähteistä, jottei jäte ole liian märkää.</h4>
+	</ul>
+	<h3 class="center">Mitä biojätteeseen ei saa laittaa</h3>
+	<ul>
+	<li>​ruokaöljyjä ja muita nestemäisiä rasvoja</li>
+	<li>​biohajoavia vaippoja ja terveyssiteitä</li>
+	<li>muovipusseja​</li>
+	<li>maito- ja mehutölkkejä​</li>
+	<li>​lääkkeitä</li>
+	<li>​purukumia, tuhkaa ja tupakantumppeja</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- section sekajäte -->
+	<div id="seka" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Sekäjäte</h2>
+	<h3 class="center">Mitä sekajätteeseen saa laittaa</h3>
+	<ul>
+	<li>juomalasit ja kuumuutta kestävät lasiastiat</li>
+	<li>posliini ja keramiikka</li>
+	<li>hehku- ja halogeenilamput sekä sulakkeet</li>
+	<li>kertakäyttövaipat, tamponit ja terveyssiteet</li>
+	<li>rikkinäiset tekstiilit ja kengät</li>
+	<li>nahka, keinonahka ja kumi</li>
+	<li>imureiden pölypussit</li>
+	<li>tuhka ja tupakantumpit</li>
+	</ul>
+	<h3 class="center">Mitä sekajätteeseen ei saa laittaa</h3>
+	<ul>
+	<p>Kierrätyskelponen jäte, kuten:</p>
+	<li>​biojäte</li>
+	<li>​lasipullot ja -purkit</li>
+	<li>​metalli</li>
+	<li>​paperi ja kartonki</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- section kartonki -->
+	<div id="kartonki" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Kartonki</h2>
+	<h3 class="center">Mitä kartonkikeräykseen saa laittaa</h3>
+	<ul>
+	<li>munakennot</li>
+	<li>maito- ja mehutölkit</li>
+	<li>talous- ja wc-paperin hylsyt</li>
+	<li>aaltopahvi ja voimapaperi</li>
+	<li>kartonkipakkaukset, kuten muropaketit</li>
+	<h4>Huuhtele pakkaukset ja tämän jälkeen litistä kasaan. Korkkeja ei tarvitse poistaa pakkauksista.</h4>
+	</ul>
+	<h3 class="center">Mitä kartonkikeräykseen ei saa laittaa</h3>
+	<ul>
+	<li>​styroksia</li>
+	<li>lahjapaperia</li>
+	<li>kuplamuovia ja muita muovisia pakkaustäytteitä</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
 
 <!-- section paperi -->
 	<div id="paperi" class="infoscreen">
@@ -105,8 +185,8 @@
 	<li>kopiopaperit ja tulosteet</li>
 	<li>piirustus- ja lehtiöpaperit</li>
 	<li>valkoisesta paperista tehdyt paperikassit</li>
+	<h4>Niittejä ja paperiliittimiä ei tarvitse poistaa. Kaiken materiaalin tulee olla puhdasta ja kuivaa.</h4>
 	</ul>
-	<h4 class="center">Niittejä ja paperiliittimiä ei tarvitse poistaa. Kaiken materiaalin tulee olla puhdasta ja kuivaa.</h4>
 	<h3 class="center">Mitä paperinkeräykseen ei saa laittaa</h3>
 	<ul>
 	<li>märät tai likaiset paperit </li>
@@ -116,11 +196,148 @@
 	<li>alumiini- tai vahapaperit</li>
 	<li>voimakkaasti värjätyt paperit kuten lahjapaperit​</li>
 	</ul>
-	<h4 class="center">Huuhtelethan pakkaukset huolellisesti. Irroita kannet ja korkit, sillä se nopeuttaa jatkojalostamista.</h4>
-	<button id="back">Avaa kartta</button>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- section metalli -->
+	<div id="metalli" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Metalli</h2>
+	<h3 class="center">Mitä metallinkeräykseen saa laittaa</h3>
+	<ul>
+	<li>säilyke- ja juomatölkit</li>
+	<li>alumiini- ja foliovuoat</li>
+	<li>metallikannet</li>
+	<li>tuikkukynttilöiden metallikuoret</li>
+	<li>metalliesineet, mitkä mahtuvat keräysastiaan</li>
+	<li>tyhjät maalipurkit</li>
+	<h4>Huuhtele metalliesineet ennen keräysastiaan laittamista.</h4>
+	</ul>
+	<h3 class="center">Mitä metallinkeräykseen ei saa laittaa</h3>
+	<ul>
+	<li>muovia ja kartonkia​</li>
+	<li>​akkuja ja paristoja</li>
+	<li>​sähkölaitteita</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- section muovi -->
+	<div id="muovi" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Muovi</h2>
+	<h3 class="center">Mitä muovinkeräykseen saa laittaa</h3>
+	<ul>
+	<li>elintarvikkeiden tyhjät muoviset pakkaukset</li>
+	<li>tyhjät muoviset pesuaine- ja shampoopullot</li>
+	<li>muovipussit ja -kääreet</li>
+	<li>tyhjät muovipullot ja -purkit</li>
+	<h4>Huuhtelet pakkaukset huolellisesti. Irroita kannet ja korkit, sillä se nopeuttaa jatkojalostamista.</h4>
+	</ul>
+	<h3 class="center">Mitä muovinkeräykseen ei saa laittaa</h3>
+	<ul>
+	<li>vaarallisten aineiden jäämiä, kuten maalia sisältävät purkit​</li>
+	<li>PVC-pakkaukset​</li>
+	<li>​muut pakkaukset</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
 	</div>
 
-		<script src="js/javascript.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
+<!-- section lasi -->
+	<div id="lasi" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Lasi</h2>
+	<h3 class="center">Mitä lasinkeräykseen saa laittaa</h3>
+	<ul>
+	<li>värittömiä ja värillisiä lasipulloja ja purkkeja</li>
+	<h4>Etikettejä tai tarroja ei tarvitse pulloista poistaa, mutta kannet eivät kuulu lasinkeräykseen.</h4>
+	</ul>
+	<h3 class="center">Mitä lasinkeräykseen ei saa laittaa</h3>
+	<ul>
+	<li>​juomalaseja</li>
+	<li>​kuumuutta kestävää lasia, kuten uunivuoat ja kahvipannut</li>
+	<li>​kristallia</li>
+	<li>​posliinia ja keramiikkaa</li>
+	<li>ikkunalasia​</li>
+	<li>​peililasia</li>
+	<li>opaalilasia (esimerkiksi jotkin kosmetiikkapakkaukset)</li>
+	<li>​lamppuja</li>
+	<h4>Yllä mainitut lasilaadut kuuluvat sekajätteeseen, koska ne eivät sovellu samaan hyödyntämisprosessiin pullojen ja purkkien kanssa.</h4>
+	<h4>Pakkaa särkynyt ikkuna- tai peililasi esimerkiksi pahviin ja erilliseen muovisäkkiin turvallisuussyistä ennen kuin laitat sen jäteastiaan.</h4>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+
+<!-- section sähkölaitteet -->
+	<div id="sähk" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Sähkölaitteet</h2>
+	<h3 class="center">Mitä sähkölaitekeräykseen saa viedä</h3>
+	<ul>
+	<li>kodinkoneet, kuten jääkaapit, pesukoneet, sähköliedet, silitysraudat ja leivänpaahtimet</li>
+	<li>kodin elektroniikka, kuten ​​tietokoneet, tulostimet, laskimet, puhelimet ja äänentoistolaitteet</li>
+	<li>valaisimet</li>
+	<li>digitaaliset kuumemittarit</li>
+	<li>lamput: led-lamput, energiansäästölamput, loisteputket, pienloistelamput ja valosarjat</li>
+	</ul>
+	<h3 class="center">Mitä sähkölaitekeräykseen ei saa viedä</h3>
+	<ul>
+	<li>​metalliromua</li>
+	<li>​hehku- ja halogeenilamput</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- section tekstiili -->
+	<div id="tekstiili" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Tekstiili</h2>
+	<ul>
+	<h4>Ehjät ja käyttökelpoiset vaatetekstiilit  voi viedä kiertoon kirpputoreille tai kierrätyskeskuksiin. Käyttökelpoisille vaatteille on nyt omia keräyspisteitä, jotka näkyvät kartalla.</h4>
+	<h4>Kuluneille ja rikkinäisille tekstiileille on omia keräysastioita, joista tekstiilit kierrätetään edelleen.</h4>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- section vaarallinen jäte -->
+	<div id="vaara" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Vaarallinen jäte</h2>
+	<h3 class="center">Mikä on vaarallista jätettä</h3>
+	<ul>
+	<li>energiansäästölamput ja muut loisteputket</li>
+	<li>paristot</li>
+	<li>lääkkeet, neulat ja ruiskut</li>
+	<li>akut</li>
+	<li>jäteöljyt</li>
+	<li>liuottimet, kuten bensiini</li>
+	<li>märät maalit, liimat ja lakat</li>
+	<li>painepakkaukset</li>
+	<li>painekyllästetty puu</li>
+	<li>puunsuoja-aineet</li>
+	<li>asbesti</li>
+	<li>emäksiset puhdistusaineet</li>
+	<li>torjunta- ja desifiontiaineet</li>
+	<li>voimakkaat hapot</li>
+	<li>elohopeaa käyttävät kuume- ja lämpomittarit</li>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+
+<!-- section puutarhajäte -->
+	<div id="puutarha" class="infoscreen">
+	<button class="button infoarrow"><img src="images/Arrow.png " alt="Takaisin" class="arrow"> </button>
+	<h2 class="center">Puutarhajäte</h2>
+	<h3 class="center">Mitä puutarhajätteeseen saa laittaa</h3>
+	<ul>
+	<li>lehdet, ruoho ja naatit</li>
+	<li>risut, kannat ja juuret</li>
+	<h4>Myös maahan varisseet omenat kuuluvat puutarhajätteeseen</h4>
+	</ul>
+	<button class="back">Avaa kartta</button>
+	</div>
+	
+	<script src="js/javascript.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>

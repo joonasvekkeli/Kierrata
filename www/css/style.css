@@ -11,25 +11,38 @@ h1, h2, h3, h4, h5, h6, p, ul{
 #sidebar{
 	position:absolute;
 	top:0px;
-	background:white;
-	border:1px solid white;
-	height:100vh;
 	width:75vw;
 	display:none;
+	text-align:center;
+	box-shadow:10px 10px 5px grey;
+}
+#sidebartop{
+	background:#9acd9c;
+	color:white;
+	border:1px solid #9acd9c;
+	min-height:20vh;
+}
+#sidebarbottom{
+	background:white;
+	border:1px solid white;
+	min-height:80vh;
+}
+#infotext{
+	text-align:left;
 }
 #roori{
-	width:55%;
-	height:55%;
+	width:50%;
+	height:50%;
 }
 #imu{
 	margin-top:30px;
-	width:55%;
-	height:55%;
+	width:50%;
+	height:50%;
 }
 #rode{
 	margin-top:30px;
-	width:55%;
-	height:55%;
+	width:50%;
+	height:50%;
 }
 #sidebartitle{
 	text-align:right;
@@ -103,10 +116,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .center{
 	text-align:center;
 }
-#paperi{
+.infoscreen{
 	display:none;
 }
-#back{
+.back{
 	text-align:center;
 	width:100%;
 	padding:10px;

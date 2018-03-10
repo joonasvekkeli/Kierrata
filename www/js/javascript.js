@@ -1,31 +1,82 @@
-//jQuery	
+//jQuery
+// Menubuttons
 	$(document).ready(function(){
     $("#mapbutton").click(function(){
         $("#info").hide("fast");
 		$("#mapid").show("fast");
-		$("#paperi").hide("fast");
+		$(".infoscreen").hide("fast");
     });
+	$( "#mapbutton" ).one( "click", function() {
+		setTimeout(function() { alert("Jos kartta ei näy kunnolla, kokeile kääntää laitteen näyttö sivusuuntaan, ja sitten takaisin."); }, 1000);
+	});
     $("#materialbutton").click(function(){
         $("#info").show("fast");
 		$("#mapid").hide("fast");
-		$("#paperi").hide("fast");
+		$(".infoscreen").hide("fast");
+    });
+
+// Individual infoscreens start
+	$("#biobutton").click(function(){
+        $("#bio").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#sekabutton").click(function(){
+        $("#seka").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#kartonkibutton").click(function(){
+        $("#kartonki").show("fast");
+		$("#info").hide("fast");
     });
 	$("#papeributton").click(function(){
         $("#paperi").show("fast");
 		$("#info").hide("fast");
     });
+	$("#metallibutton").click(function(){
+        $("#metalli").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#muovibutton").click(function(){
+        $("#muovi").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#lasibutton").click(function(){
+        $("#lasi").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#sähkbutton").click(function(){
+        $("#sähk").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#tekstiilibutton").click(function(){
+        $("#tekstiili").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#vaarabutton").click(function(){
+        $("#vaara").show("fast");
+		$("#info").hide("fast");
+    });
+	$("#puutarhabutton").click(function(){
+        $("#puutarha").show("fast");
+		$("#info").hide("fast");
+    });
+// Individual infoscreens end
+// Infoscreen backbutton
 		$(".infoarrow").click(function(){
         $(".infoscreen").hide("fast");
 		$("#info").show("fast");
     });
-		$("#back").click(function(){
+// Open map from infoscreen
+		$(".back").click(function(){
         $("#mapid").show("fast");
-		$("#paperi").hide("fast");
+		$(".infoscreen").hide("fast");
     });
+// Hamburger button
 		$("#menubutton").click(function(){
         $("#sidebar").show("fast");
 		$("#mapid").css("z-index", "-1");
     });
+// Sidescreen exit
 		$("#backtomenu").click(function(){
         $("#sidebar").hide("fast");
 		$("#mapid").css("z-index", "1");
