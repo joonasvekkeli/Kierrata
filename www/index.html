@@ -16,20 +16,19 @@
 	
 	<table id="appbar">
 	<tr>
-	<td class="three"><button id="menubutton" class="button"><img id="menuicon" src="images/Hamburger_icon.png" alt="Menu"></button>
+	<td class="five"><button id="menubutton" class="button"><img id="menuicon" src="images/Hamburger_icon.png" alt="Menu"></button>
 	</td>
-	<td class="three" id="title"><h2>Kierrätä</h2>
+	<td class="five"></button><h3 id="title">Kierrätä</h3>
 	</td>
-	<td class="three">
+	<td class="five">
 	</td>
-	</tr>
-	</table>
-	
-	<table id="toolbar">
-	<tr>
-	<td class="two"><button class="button" id="materialbutton"><h3 class="white">Mitä kierrätät</h3></button>
+	<td class="five">
 	</td>
-	<td class="two"><button class="button" id="mapbutton"><h3 class="white">Etsi kierrätyspisteet</h3></button>
+	<td class="five">
+	<button class="button" id="materialbutton"><img src="images/info.png" class="icon" alt="Info"></button>
+	<button class="button" id="mapbutton"><img src="images/map.png" class="icon" alt="Kartta"></button>
+	</td>
+	<td class="five">
 	</td>
 	</tr>
 	</table>
@@ -38,10 +37,7 @@
 	<div id="sidebar">
 	<div id="sidebartop">
 	<button class="button" id="backtomenu"><img src="images/Arrow_white.png " alt="Takaisin" class="arrow"> </button>
-	<h2 id="sidebartitle">Kierrätä</h2>
-	<br>
-	<p id="infotext">Kierrätä-sovelluksen tehtävänä on tukea arkipäivän kierrätystä. Löydät lähimmät pisteesi ja tietoa materiaalikierrätyksestä.</p>
-	<br>
+	<h3 id="sidebartitle">Kierrätä</h3>
 	</div>
 	<div id="sidebarbottom">
 	<h3 id="sidebartitle2">Yhteistyössä:</h3>
@@ -56,7 +52,7 @@
 	
 <!-- section Terms of Service -->
 	<div id="terms">
-	<button class="button" id="back2"><img src="images/Arrow.png" class="arrow" alt="Takaisin"></button>
+	<button class="button" id="exitToS"><img src="images/Arrow.png" class="arrow" alt="Takaisin"></button>
 	<h2 class="center">Käyttöehdot</h2>
 	<h3>Sovelluksen tarjoaja</h3>
 	<p>Kierrätä -sovellusta ylläpitää ja sen tarjoaa käyttöön Kierrätä -tiimi: Pyry Simula, Alisa Taskinen ja Joonas Vekkeli.</p>
@@ -130,7 +126,8 @@
 	
 	</div>
 	
-<!-- section 1 -->
+	<div id="main">
+<!-- section info -->
 	<table id="info">
 	<tr>
 	<td class="two"><button class="infobutton" id="biobutton">Biojäte</button>
@@ -408,6 +405,9 @@
 	<h4>Myös maahan varisseet omenat kuuluvat puutarhajätteeseen</h4>
 	</ul>
 	<button class="back">Avaa kartta</button>
+	</div>
+	
+<!-- div main end -->	
 	</div>
 	
 	<script src="js/javascript.js"></script>

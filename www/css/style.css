@@ -2,34 +2,36 @@ body{
 	margin:0;
 	padding:0;
 }
+button:focus{
+	outline:none;
+}
 h1, h2, h3, h4, h5, h6, p, ul{
 	font-family:Roboto, sans-serif;
-	font-weight:lighter;
+	font-weight:normal;
 }
 #appbar{
 	background-color:#9acd9c;
-	height:8vh;
-	min-height:50px;
-	width:100%;
+	width:100vw;
+	height:10vh;
 }
 #sidebar{
 	position:absolute;
 	top:0px;
-	width:75vw;
+	width:74vw;
 	display:none;
 	text-align:center;
-	box-shadow:10px 10px 5px grey;
+	box-shadow:27vw 0px rgba(0, 0, 0, .60);
 }
 #sidebartop{
 	background:#9acd9c;
 	color:white;
 	border:1px solid #9acd9c;
-	min-height:20vh;
+	min-height:10vh;
 }
 #sidebarbottom{
 	background:white;
 	border:1px solid white;
-	min-height:80vh;
+	min-height:89vh;
 }
 #infotext{
 	text-align:left;
@@ -51,7 +53,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 #sidebartitle{
 	text-align:right;
 	margin-right:20px;
-	
 }
 #sidebartitle2{
 	text-align:center;
@@ -62,8 +63,9 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	float:left;
 }
 .arrow{
-	width:35px;
-	height:35px;
+	width:7vw;
+	height:4vh;
+	max-width:25px;
 }
 .infoarrow{
 	padding:10px;
@@ -77,10 +79,14 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	background:none;
 }
 #menuicon{
+	margin-top:3px;
+	margin-left:3px;
 	width:5vw;
+	height:4vh;
+	min-height:25px;
+	min-width:25px;
+	max-height:40px;
 	max-width:40px;
-	height:30px;
-	padding:10px;
 }
 #menubutton:hover{
 	background:#94db8a;
@@ -89,21 +95,13 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .three{
 	width:33%;
 }
+.five{
+	width:20%;
+}
 #title{
-	text-align:center;
 	color:white;
-}
-#toolbar{
-	background-color:#9acd9c;
-	height:8vh;
-	min-height:50px;
-	width:100%;
-}
-#toolbar button{
-	width:100%;
-}
-#materialbutton{
-	background:#94db8a;
+	margin:0px;
+	padding:0px;
 }
 .two{
 	width:50%;
@@ -114,6 +112,19 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 #info{
 	width:100%;
+	display:none;
+}
+.icon{
+	width:40%;
+	height:40%;
+	margin-top:3px;
+	min-height:20px;
+	min-width:20px;
+	max-height:60px;
+	max-width:60px;
+}
+#mapbutton{
+	display:none;
 }
 .infobutton{
 	width:80%;
@@ -128,14 +139,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	color:white;
 }
 #mapid{
-	height:78vh;
-	display:none;
+	height:90vh;
 }
 .center{
 	text-align:center;
 }
 .infoscreen{
 	display:none;
+}
+.infoscreen h4{
+	margin-right:10px;
 }
 .back{
 	text-align:center;

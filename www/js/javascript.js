@@ -1,103 +1,100 @@
-//jQuery
 // Menubuttons
 	$(document).ready(function(){
     $("#mapbutton").click(function(){
-        $("#info").hide("fast");
-		$("#mapid").show("fast");
-		$(".infoscreen").hide("fast");
-		$("#mapbutton").css("background", "#94db8a");
-		$("#materialbutton").css("background", "#9acd9c");
+        $("#info").fadeOut("fast");
+		$("#mapid").delay("fast").fadeIn("fast");
+		$(".infoscreen").hide();
+		$("#materialbutton").delay("fast").fadeIn("fast");
+		$("#mapbutton").hide();
+		$("#terms").hide();
+		$("#main").show();
     });
-	$( "#mapbutton" ).one( "click", function() {
-		setTimeout(function() { alert("Jos kartta ei näy kunnolla, kokeile kääntää laitteen näyttö sivusuuntaan, ja sitten takaisin."); }, 1000);
-	});
     $("#materialbutton").click(function(){
-        $("#info").show("fast");
-		$("#mapid").hide("fast");
-		$(".infoscreen").hide("fast");
-		$("#mapbutton").css("background", "#9acd9c");
-		$("#materialbutton").css("background", "#94db8a");
+        $("#info").delay("fast").fadeIn("fast");
+		$("#mapid").fadeOut("fast");
+		$(".infoscreen").fadeOut("fast");
+		$("#materialbutton").hide();
+		$("#mapbutton").delay("fast").fadeIn("fast");
+		$("#terms").fadeOut("fast");
+		$("#main").show();
     });
 // Infoscreen backbutton
 		$(".infoarrow").click(function(){
-        $(".infoscreen").hide("fast");
-		$("#info").show("fast");
+        $(".infoscreen").hide();
+		$("#info").fadeIn("fast");
     });
 // Open map from infoscreen
 		$(".back").click(function(){
-        $("#mapid").show("fast");
-		$(".infoscreen").hide("fast");
-		$("#mapbutton").css("background", "#94db8a");
-		$("#materialbutton").css("background", "#9acd9c");
+        $(".infoscreen").fadeOut("fast");
+		$("#mapid").delay("fast").fadeIn("fast");
+		$("#materialbutton").show();
+		$("#mapbutton").hide();
     });
 // Hamburger button
 		$("#menubutton").click(function(){
         $("#sidebar").show("fast");
 		$("#mapid").css("z-index", "-1");
     });
-// Sidescreen exit
+// Sidebar exit
 		$("#backtomenu").click(function(){
         $("#sidebar").hide("fast");
 		$("#mapid").css("z-index", "1");
     });
 // ToS
 	$("#tos").click(function(){
-		$("#terms").show("fast");
-        $("#sidebar").hide("fast");
-		$("#toolbar").hide("fast");
-		$("#mapid").hide("fast");
-		$("#info").hide("fast");
-		$(".infoscreen").hide("fast");
+		$("#terms").slideDown("slow");
+        $("#sidebar").hide();
+		$("#main").hide();
 	});
-	$("#back2").click(function(){
-		$("#terms").hide("fast");
-		$("#toolbar").show("fast");
-		$("#info").show("fast");
+	$("#exitToS").click(function(){
+		$("#terms").hide();
+		$("#main").fadeIn();
+		$("#mapid").css("z-index", "1");
 	});
 // Individual infoscreens start
 	$("#biobutton").click(function(){
-        $("#bio").show("fast");
-		$("#info").hide("fast");
+        $("#bio").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#sekabutton").click(function(){
-        $("#seka").show("fast");
-		$("#info").hide("fast");
+        $("#seka").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#kartonkibutton").click(function(){
-        $("#kartonki").show("fast");
-		$("#info").hide("fast");
+        $("#kartonki").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#papeributton").click(function(){
-        $("#paperi").show("fast");
-		$("#info").hide("fast");
+        $("#paperi").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#metallibutton").click(function(){
-        $("#metalli").show("fast");
-		$("#info").hide("fast");
+        $("#metalli").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#muovibutton").click(function(){
-        $("#muovi").show("fast");
-		$("#info").hide("fast");
+        $("#muovi").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#lasibutton").click(function(){
-        $("#lasi").show("fast");
-		$("#info").hide("fast");
+        $("#lasi").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#sähkbutton").click(function(){
-        $("#sähk").show("fast");
-		$("#info").hide("fast");
+        $("#sähk").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#tekstiilibutton").click(function(){
-        $("#tekstiili").show("fast");
-		$("#info").hide("fast");
+        $("#tekstiili").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#vaarabutton").click(function(){
-        $("#vaara").show("fast");
-		$("#info").hide("fast");
+        $("#vaara").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 	$("#puutarhabutton").click(function(){
-        $("#puutarha").show("fast");
-		$("#info").hide("fast");
+        $("#puutarha").delay("fast").slideDown(100);
+		$("#info").fadeOut("fast");
     });
 // Individual infoscreens end
 });
@@ -133,7 +130,7 @@
 		.bindPopup("<b>Pääkaupunkiseudun kierrätyskeskus Oy/<br>Kyläsaaren kauppa</b>");
 	*/
 	
-// Pisteet
+// Käyttäjän 3 pisteet
 
 	L.marker([60.233976, 25.116772], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>ALUEELLINEN KERÄYSPISTE PAPERINKERÄYS OY/<br>Naulakalliontie 13</b><br><ul><li>paperi</li></ul>");
@@ -198,7 +195,8 @@
 	L.marker([60.228563, 24.977061], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>ALUEELLINEN KERÄYSPISTE PAPERINKERÄYS OY/<br>Aidasmäentie 19</b><br><ul><li>paperi</li></ul>");
 
-// OMAT
+// Käyttäjän 1 pisteet
+
 	L.marker([60.225258, 24.972387], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Alueellinen keräyspiste, Paperinkeräys oy/<br>Kirkkoherrantie 8</b><ul><li>paperi</li></ul>");
 		
@@ -271,7 +269,7 @@
 	L.marker([60.250751, 24.899246], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Alueellinen keräyspiste, Paperinkeräys oy/<br>Vannetie 61</b><ul><li>paperi</li></ul>");
 		
-//Pyry
+//Käyttäjän 2 pisteet
 
 	L.marker([60.169243, 24.937813], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Gigantti Forum/<br>Mannerheimintie 20B</b><br><ul><li>Sähkölaitteet</li><li>Lamput</li><li>Paristot</li></ul>");
@@ -414,11 +412,12 @@
 	
 	var popup = L.popup();
 	
+	/* debug feature
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
-			.setContent("You clicked the map at " + e.latlng.toString())
+			.setContent("Koordinaatit: " + e.latlng.toString())
 			.openOn(mymap);
 	}
 	mymap.on('click', onMapClick);
-	
+	*/
