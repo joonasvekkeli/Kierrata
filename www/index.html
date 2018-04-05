@@ -23,12 +23,11 @@
 	<td class="five">
 	</td>
 	<td class="five">
-	</td>
-	<td class="five">
 	<button class="button" id="materialbutton"><img src="images/info.png" class="icon" alt="Info"></button>
 	<button class="button" id="mapbutton"><img src="images/map.png" class="icon" alt="Kartta"></button>
 	</td>
 	<td class="five">
+	<button class="button" id="legendbutton"><img src="images/legend_white.png" class="icon2" alt="Info"></button>
 	</td>
 	</tr>
 	</table>
@@ -36,8 +35,9 @@
 <!-- section sidebar -->
 	<div id="sidebar">
 	<div id="sidebartop">
-	<button class="button" id="backtomenu"><img src="images/Arrow_white.png " alt="Takaisin" class="arrow"> </button>
+	<button class="button" id="backtomenu"><img src="images/Arrow_white.png " alt="Takaisin" class="arrow"></button>
 	<h3 id="sidebartitle">Kierrätä</h3>
+	<!-- Kierrätä-sovelluksen tehtävänä on tukea arkipäivän kierrätystä. Löydät lähimmät pisteesi ja tietoa materiaalikierrätyksestä.-->
 	</div>
 	<div id="sidebarbottom">
 	<h3 id="sidebartitle2">Yhteistyössä:</h3>
@@ -48,6 +48,36 @@
 	<button class="infobutton" onclick="location.href='https://goo.gl/forms/NjxgICfRNEYqLrLt2'" type="button">Anna palautetta</button>
 	<button id="tos" class="infobutton">Sovelluksen käyttöehdot</button>
 	</div>
+	</div>
+	
+	<div id="maincontent">
+	
+<!-- section legend -->
+	<div id="legend">
+	<table class="legendContent">
+	<tr>
+	<td class="two"><h3>Kartan selite</h3></td>
+	<td class="two"></td>
+	</tr>
+	</table>
+	<table class="legendContent">
+	<tr>
+	<td><img src="images/icon_kierrata.png" alt="icon" class="legendIcon"></td>
+	<td><p>Yleinen kierrätyspiste</p></td>
+	</tr>
+	<tr>
+	<td><img src="images/icon_roori.png" alt="icon" class="legendIcon"></td>
+	<td><p>Vain Jätkäsaaren putkikeräysjärjestelmän käyttäjille</p></td>
+	</tr>
+	<tr>
+	<td><img src="images/icon_imu.png" alt="icon" class="legendIcon"></td>
+	<td><p>Vain Kalasataman putkikeräysjärjestelmän käyttäjille</p></td>
+	</tr>
+	<tr>
+	<td><img src="images/icon_rode.png" alt="icon" class="legendIcon"></td>
+	<td><p>Vain Kruunuvuorenrannan putkikeräysjärjestelmän käyttäjille</p></td>
+	</tr>
+	</table>
 	</div>
 	
 <!-- section Terms of Service -->
@@ -189,7 +219,6 @@
 	<li>​lääkkeitä</li>
 	<li>​purukumia, tuhkaa ja tupakantumppeja</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- section sekajäte -->
@@ -215,7 +244,6 @@
 	<li>​metalli</li>
 	<li>​paperi ja kartonki</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- section kartonki -->
@@ -237,7 +265,6 @@
 	<li>lahjapaperia</li>
 	<li>kuplamuovia ja muita muovisia pakkaustäytteitä</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 
 <!-- section paperi -->
@@ -266,7 +293,6 @@
 	<li>alumiini- tai vahapaperit</li>
 	<li>voimakkaasti värjätyt paperit kuten lahjapaperit​</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- section metalli -->
@@ -289,7 +315,6 @@
 	<li>​akkuja ja paristoja</li>
 	<li>​sähkölaitteita</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- section muovi -->
@@ -310,7 +335,6 @@
 	<li>PVC-pakkaukset​</li>
 	<li>​muut pakkaukset</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 
 <!-- section lasi -->
@@ -335,7 +359,6 @@
 	<h4>Yllä mainitut lasilaadut kuuluvat sekajätteeseen, koska ne eivät sovellu samaan hyödyntämisprosessiin pullojen ja purkkien kanssa.</h4>
 	<h4>Pakkaa särkynyt ikkuna- tai peililasi esimerkiksi pahviin ja erilliseen muovisäkkiin turvallisuussyistä ennen kuin laitat sen jäteastiaan.</h4>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 
 <!-- section sähkölaitteet -->
@@ -355,7 +378,6 @@
 	<li>​metalliromua</li>
 	<li>​hehku- ja halogeenilamput</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- section tekstiili -->
@@ -366,7 +388,6 @@
 	<h4>Ehjät ja käyttökelpoiset vaatetekstiilit  voi viedä kiertoon kirpputoreille tai kierrätyskeskuksiin. Käyttökelpoisille vaatteille on nyt omia keräyspisteitä, jotka näkyvät kartalla.</h4>
 	<h4>Kuluneille ja rikkinäisille tekstiileille on omia keräysastioita, joista tekstiilit kierrätetään edelleen.</h4>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- section vaarallinen jäte -->
@@ -391,7 +412,12 @@
 	<li>voimakkaat hapot</li>
 	<li>elohopeaa käyttävät kuume- ja lämpomittarit</li>
 	</ul>
-	<button class="back">Avaa kartta</button>
+	<h3 class="warning"><img src="images/Warning.png" class="warn" alt="Huomio">Vaarallisella jätteellä ei ole 
+	yhtenäisiä kierrätysastioita. Usein tuotteen myyntipakkauksessa tai käyttöohjeissa on tarkat tiedot 
+	tuotteen hävittämisestä. Noudata erityistä varoivaisuutta käsitellessäsi 
+	vaarallista jätettä välttääksesi vakavaa vahinkoa itsellesi 
+	ja ympäristöllesi!</h3>
+	</ul>
 	</div>
 
 <!-- section puutarhajäte -->
@@ -404,10 +430,10 @@
 	<li>risut, kannat ja juuret</li>
 	<h4>Myös maahan varisseet omenat kuuluvat puutarhajätteeseen</h4>
 	</ul>
-	<button class="back">Avaa kartta</button>
 	</div>
 	
 <!-- div main end -->	
+	</div>
 	</div>
 	
 	<script src="js/javascript.js"></script>

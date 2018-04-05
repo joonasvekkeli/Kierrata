@@ -23,23 +23,29 @@
         $(".infoscreen").hide();
 		$("#info").fadeIn("fast");
     });
-// Open map from infoscreen
-		$(".back").click(function(){
-        $(".infoscreen").fadeOut("fast");
-		$("#mapid").delay("fast").fadeIn("fast");
-		$("#materialbutton").show();
-		$("#mapbutton").hide();
-    });
-// Hamburger button
+// Sidebar
 		$("#menubutton").click(function(){
         $("#sidebar").show("fast");
+		$("#legend").hide("fast");
 		$("#mapid").css("z-index", "-1");
     });
-// Sidebar exit
 		$("#backtomenu").click(function(){
         $("#sidebar").hide("fast");
 		$("#mapid").css("z-index", "1");
     });
+// Legend
+		$("#legendbutton").click(function(){
+        $("#legend").toggle("fast");
+		$("#mapid").css("z-index", "-1");
+		$("#sidebar").hide("fast");
+		$('.infobutton').prop('disabled', true);
+	});
+		$("#maincontent").click(function(){
+        $("#legend").hide("fast");
+		$("#sidebar").hide("fast");
+		$("#mapid").css("z-index", "1");
+		$('.infobutton').prop('disabled', false);
+	});
 // ToS
 	$("#tos").click(function(){
 		$("#terms").slideDown("slow");
@@ -96,7 +102,6 @@
         $("#puutarha").delay("fast").slideDown(100);
 		$("#info").fadeOut("fast");
     });
-// Individual infoscreens end
 });
 
 //Map
@@ -340,8 +345,28 @@
 	L.marker([60.173894, 24.960360], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>KIERRÄTYSPISTE HSY:N JÄTEHUOLTO/<br>Maneesikatu/Pohjoisranta</b><br><ul><li>paperi</li><li>metalli</li><li>kartonki</li><li>muovi</li><li>lasi</li></ul>");
 
+//loput pisteet 101-155 ei paperipisteitä
 
+	L.marker([60.198672, 24.971263], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste/<br>Kyläsaarenkatu 8</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>elektroniikka</li><li>tekstiili</li><li>paristot</li></ul>");
+		
+	L.marker([60.248612, 24.996239], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste/<br>Kenttätie 3</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li></ul>");
+		
+	L.marker([60.251888, 24.980660], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste/<br>Simpukkakuja 2</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+		
+	L.marker([60.256127, 24.997985], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste/<br>Takaniitynkuja 2</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+		
+	L.marker([60.260951, 25.073021], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste/<br>Jakomäentie 2</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>tekstiili</li></ul>");
+		
+	L.marker([60.186060, 25.000644], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste/<br>Kulosaarentie 2</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>tekstiili</li></ul>");
+	
 // Röörin pisteet
+
 	L.marker([60.158137, 24.911845], {icon: orangeIcon}).addTo(mymap)
 		.bindPopup("<b>Kontti/<br>Länsisatamankatu 18</b><br><i>Vain Rööri-järjestelmän käyttäjille. Avataan isännöitsijällä saatavalla koodilla.</i><ul><li>lasi</li><li>metalli</li><li>suurikokoinen pahvi</li><li>suurikokoinen sekajäte</li></ul>");
 		
