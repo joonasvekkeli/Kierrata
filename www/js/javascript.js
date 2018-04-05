@@ -114,6 +114,16 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 	
+	mymap.locate({setView: true, maxZoom: 15});
+	
+	function onLocationFound(e) {
+    var radius = e.accuracy / 3;
+	
+    L.circle(e.latlng, radius).addTo(mymap);
+	}
+
+	mymap.on('locationfound', onLocationFound);
+	
 	var LeafIcon = L.Icon.extend({
 		options: {
 			shadowUrl: 'images/marker-shadow.png',
