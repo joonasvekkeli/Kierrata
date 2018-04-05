@@ -11,12 +11,8 @@
     <content src="index.html" />
     <access origin="content:///*" />
     <access origin="*" />
-    <plugin name="org.apache.cordova.geolocation" spec="0.3.12" source="pgb" />
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <preference name="orientation" value="portrait" />
     <icon src="www/images/logo.png" />
+    <plugin name="cordova-plugin-geolocation" spec="~4.0.1" />
     <plugin name="cordova-plugin-whitelist" version="1" />
 </widget>
