@@ -8,6 +8,8 @@
 		$("#mapbutton").hide();
 		$("#terms").hide();
 		$("#main").show();
+		$("#legendbutton").delay("fast").fadeIn("fast");
+		$("#gpsbutton").delay("fast").fadeIn("fast");
     });
     $("#materialbutton").click(function(){
         $("#info").delay("fast").fadeIn("fast");
@@ -17,6 +19,8 @@
 		$("#mapbutton").delay("fast").fadeIn("fast");
 		$("#terms").fadeOut("fast");
 		$("#main").show();
+		$("#legendbutton").fadeOut("fast");
+		$("#gpsbutton").fadeOut("fast");
     });
 // Infoscreen backbutton
 		$(".infoarrow").click(function(){
@@ -134,19 +138,18 @@
 			popupAnchor:  [1, -41]
 		}
 	});
+	
+	$("#gpsbutton").on('click', function(){
+	mymap.locate({setView: true, maxZoom: 15});
+	});
 
 	var orangeIcon = new LeafIcon({iconUrl: 'images/icon_roori.png'});
 	var cyanIcon = new LeafIcon({iconUrl: 'images/icon_imu.png'});
 	var pinkIcon = new LeafIcon({iconUrl: 'images/icon_rode.png'});
 	var blueIcon = new LeafIcon({iconUrl: 'images/icon_kierrata.png'});
 	
-	/*
-	L.marker([60.197765, 24.972364], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Pääkaupunkiseudun kierrätyskeskus Oy/<br>Kyläsaaren kauppa</b>");
-	*/
+	//Pisteet
 	
-// Käyttäjän 3 pisteet
-
 	L.marker([60.204276, 25.117751], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Meri-Rastilantie 4</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li></ul>");
 
@@ -161,8 +164,6 @@
 
 	L.marker([60.212127, 24.898577], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Kierrätyspiste<br>Haagan tori</b><br><ul><li>paperi</li><li>metalli</li><li>kartonki</li><li>lasi</li></ul>");
-
-// Käyttäjän 1 pisteet
 		
 	L.marker([60.201546, 24.876830], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Kierrätyspiste<br>Laajalahdentie 13</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
@@ -181,8 +182,6 @@
 	
 	L.marker([60.244927, 24.846501], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Rinki-ekopiste<br>Hankasuontie 2</b><ul><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li></ul>");
-		
-//Käyttäjän 2 pisteet
 
 	L.marker([60.169243, 24.937813], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Gigantti Forum<br>Mannerheimintie 20B</b><br><ul><li>Sähkölaitteet</li><li>Lamput</li><li>Paristot</li></ul>");
@@ -201,8 +200,6 @@
 		
 	L.marker([60.173894, 24.960360], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Maneesikatu/Pohjoisranta</b><br><ul><li>paperi</li><li>metalli</li><li>kartonki</li><li>muovi</li><li>lasi</li></ul>");
-
-//loput pisteet 101-155 ei paperipisteitä
 
 	L.marker([60.198672, 24.971263], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Kyläsaarenkatu 8</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>elektroniikka</li><li>tekstiili</li><li>paristot</li></ul>");
