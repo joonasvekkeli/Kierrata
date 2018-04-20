@@ -14,12 +14,11 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
-        <splash density="port-ldpi" src="www/images/splash.png" />
-        <splash density="port-mdpi" src="www/images/splash.png" />
-        <splash density="port-hdpi" src="www/images/splash.png" />
-        <splash density="port-xhdpi" src="www/images/splash.png" />
-        <splash density="port-xxhdpi" src="www/images/splash.png" />
-        <splash density="port-xxxhdpi" src="www/images/splash.png" />
+        <splash src="splash.png" />
+        <splash src="splash.png" platform="android" qualifier="ldpi" />
+        <splash src="splash.png" platform="android" qualifier="mdpi" />
+        <splash src="splash.png" platform="android" qualifier="hdpi" />
+        <splash src="splash.png" platform="android" qualifier="xhdpi" />
     </platform>
     <content src="index.html" />
     <access origin="content:///*" />
