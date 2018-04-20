@@ -11,7 +11,7 @@
     <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
-    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <splash src="splash.png" />
