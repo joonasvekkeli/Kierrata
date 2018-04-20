@@ -7,21 +7,23 @@
     <author email="digikierrata@gmail.com" href="http://kierrata.com">
         Kierrätä -tiimi
     </author>
+    <plugin name="cordova-plugin-geolocation" version="2.1.0" />
+    <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
-     <splash src="www/images/splash.png" density="port-ldpi"/>
-     <splash src="www/images/splash.png" density="port-mdpi"/>
-     <splash src="www/images/splash.png" density="port-hdpi"/>
-     <splash src="www/images/splash.png" density="port-xhdpi"/>
+        <splash density="port-ldpi" src="www/images/splash.png" />
+        <splash density="port-mdpi" src="www/images/splash.png" />
+        <splash density="port-hdpi" src="www/images/splash.png" />
+        <splash density="port-xhdpi" src="www/images/splash.png" />
+        <splash density="port-xxhdpi" src="www/images/splash.png" />
+        <splash density="port-xxxhdpi" src="www/images/splash.png" />
     </platform>
     <content src="index.html" />
     <access origin="content:///*" />
     <access origin="*" />
     <preference name="orientation" value="portrait" />
     <icon src="www/images/logo.png" />
-    <plugin name="cordova-plugin-geolocation" version="2.1.0" />
-    <plugin name="cordova-plugin-network-information" spec="~2.0.1" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1"/>
 </widget>
