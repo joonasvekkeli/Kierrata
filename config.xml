@@ -7,13 +7,14 @@
     <author email="digikierrata@gmail.com" href="http://kierrata.com">
         Kierrätä -tiimi
     </author>
-    <platform name="android">
-     <splash src="images/splash.png" density="port-ldpi"/>
-     <splash src="images/splash.png" density="port-mdpi"/>
-     <splash src="images/splash.png" density="port-hdpi"/>
-     <splash src="images/splash.png" density="port-xhdpi"/>
-    </platform>
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <platform name="android">
+     <splash src="www/images/splash.png" density="port-ldpi"/>
+     <splash src="www/images/splash.png" density="port-mdpi"/>
+     <splash src="www/images/splash.png" density="port-hdpi"/>
+     <splash src="www/images/splash.png" density="port-xhdpi"/>
+    </platform>
     <content src="index.html" />
     <access origin="content:///*" />
     <access origin="*" />
