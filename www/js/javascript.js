@@ -10,6 +10,7 @@
 		$("#main").show();
 		$("#legendbutton").delay("fast").fadeIn("fast");
 		$("#gpsbutton").delay("fast").fadeIn("fast");
+		$("#frequent").hide();
     });
     $("#materialbutton").click(function(){
         $("#info").delay("fast").fadeIn("fast");
@@ -21,9 +22,15 @@
 		$("#main").show();
 		$("#legendbutton").fadeOut("fast");
 		$("#gpsbutton").fadeOut("fast");
+		$("#frequent").hide();
     });
 // Infoscreen backbutton
 		$(".infoarrow").click(function(){
+        $(".infoscreen").hide();
+		$("#info").fadeIn("fast");
+    });
+	
+		$(".infoarrow2").click(function(){
         $(".infoscreen").hide();
 		$("#info").fadeIn("fast");
     });
@@ -55,9 +62,22 @@
 		$("#terms").slideDown("slow");
         $("#sidebar").hide();
 		$("#main").hide();
+		$("#frequent").hide();
 	});
-	$("#exitToS").click(function(){
+	$(".exitToS").click(function(){
 		$("#terms").hide();
+		$("#main").fadeIn();
+		$("#mapid").css("z-index", "1");
+	});
+// FAQ
+		$("#faq").click(function(){
+		$("#frequent").slideDown("slow");
+        $("#sidebar").hide();
+		$("#main").hide();
+		$("#terms").hide();
+	});
+	$(".exitFre").click(function(){
+		$("#frequent").hide();
 		$("#main").fadeIn();
 		$("#mapid").css("z-index", "1");
 	});
@@ -163,28 +183,25 @@
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Pirkkolantie 25</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>tekstiili</li><li>kartonki</li><li>muovi</li></ul>");
 
 	L.marker([60.212127, 24.898577], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Kierrätyspiste<br>Haagan tori</b><br><ul><li>paperi</li><li>metalli</li><li>kartonki</li><li>lasi</li></ul>");
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Haagan tori</b><br><ul><li>paperi</li><li>metalli</li><li>kartonki</li><li>lasi</li></ul>");
 		
 	L.marker([60.201546, 24.876830], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Kierrätyspiste<br>Laajalahdentie 13</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Laajalahdentie 13</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
 		
 	L.marker([60.206456, 24.876816], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Kierrätyspiste<br>Naantalintie 2</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li></ul>");
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Naantalintie 2</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li></ul>");
 
 	L.marker([60.218547, 24.854466], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Kierrätyspiste<br>Pajamäentie 12-14</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Pajamäentie 12-14</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
 	
 	L.marker([60.256958, 24.946002], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Kierrätyspiste, HSY:n jätehuolto<br>Torpparinmäentie 1a</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+		.bindPopup("<b>HSY:n kierrätyspiste, HSY:n jätehuolto<br>Torpparinmäentie 1a</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
 	
 	L.marker([60.240543, 24.849571], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Kierrätyspiste<br>Ristipellonkuja 1</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li></ul>");
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Ristipellonkuja 1</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li></ul>");
 	
 	L.marker([60.244927, 24.846501], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>Rinki-ekopiste<br>Hankasuontie 2</b><ul><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li></ul>");
-
-	L.marker([60.169243, 24.937813], {icon: blueIcon}).addTo(mymap)
-		.bindPopup("<b>Gigantti Forum<br>Mannerheimintie 20B</b><br><ul><li>Sähkölaitteet</li><li>Lamput</li><li>Paristot</li></ul>");
 
 	L.marker([60.160357, 24.940385], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n vaarallisten jätteiden keräyspiste<br>Pursimiehenkatu 6</b><br><ul><li>Ajoneuvoakut</li><li>Lamput</li><li>Paristot</li><li>Vaarallinen jäte</li></ul>");
@@ -198,7 +215,7 @@
 	L.marker([60.238357, 25.083058], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Ostostie 6</b><br><ul><li>Paperi</li><li>Metallit</li><li>Lasipakkaukset</li><li>Kartonkipakkaukset</li></ul>");
 		
-	L.marker([60.173894, 24.960360], {icon: blueIcon}).addTo(mymap)
+	L.marker([60.173637, 24.960997], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Maneesikatu/Pohjoisranta</b><br><ul><li>paperi</li><li>metalli</li><li>kartonki</li><li>muovi</li><li>lasi</li></ul>");
 
 	L.marker([60.198672, 24.971263], {icon: blueIcon}).addTo(mymap)
@@ -218,6 +235,35 @@
 		
 	L.marker([60.186060, 25.000644], {icon: blueIcon}).addTo(mymap)
 		.bindPopup("<b>HSY:n kierrätyspiste<br>Kulosaarentie 2</b><br><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>tekstiili</li></ul>");
+		
+// uudet
+	
+	L.marker([60.214796, 25.104034], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Rusthollarintie</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.22147, 25.141381], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Isonvillasaarentie</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.160811, 24.874898], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Särkiniementie</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.198854, 24.903877], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Kiskontie</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li></ul>");
+		
+	L.marker([60.222126, 24.948997], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Perkiöntie</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.222126, 24.948997], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Riihenkulma</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.274323, 25.045996], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Puistolan tori</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.196465, 25.054188], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Satumaanpolku</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>tekstiili</li></ul>");
+	
+	L.marker([60.191313, 25.061307], {icon: blueIcon}).addTo(mymap)
+		.bindPopup("<b>HSY:n kierrätyspiste<br>Tammisalon aukio</b><ul><li>paperi</li><li>metalli</li><li>lasi</li><li>kartonki</li><li>muovi</li><li>tekstiili</li></ul>");
 	
 // Röörin pisteet
 
@@ -291,7 +337,7 @@
 	
 	var popup = L.popup();
 	
-	/* debug feature
+/*debug feature
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
@@ -299,4 +345,4 @@
 			.openOn(mymap);
 	}
 	mymap.on('click', onMapClick);
-	*/
+*/

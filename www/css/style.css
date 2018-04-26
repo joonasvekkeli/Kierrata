@@ -92,7 +92,8 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	max-width:25px;
 }
 .infoarrow{
-	padding:10px;
+	display:block;
+	margin:auto;
 }
 #infotext{
 	margin-left:20px;
@@ -111,6 +112,20 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	min-width:25px;
 	max-height:40px;
 	max-width:40px;
+}
+#gpsbutton:hover{
+	background:#94db8a;
+	border-radius:20px;
+}
+#frequent{
+	display:none;
+	padding:15px;
+	width:90%;
+	background-color:white;
+}
+.fix{
+	display:block;
+	margin:auto;
 }
 .three{
 	width:33%;
@@ -161,7 +176,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	margin-top:10px;
 	border:2px #9acd9c solid;
 	background:none;
-	color:#9acd9c
+	color:#9acd9c;
 }
 .infobutton:hover{
 	background:#94db8a;
@@ -181,21 +196,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .infoscreen h4{
 	margin-right:10px;
 }
-/*
-.back{
-	text-align:center;
-	width:100%;
-	padding:10px;
-	margin-top:10px;
-	border:2px #9acd9c solid;
-	background:none;
-	color:#9acd9c
-}
-.back:hover{
-	background:#94db8a;
-	color:white;
-}
-*/
 #terms{
 	display:none;
 	padding:15px;
