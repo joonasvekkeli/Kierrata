@@ -82,18 +82,18 @@ h1, h2, h3, h4, h5, h6, p, ul{
 	text-align:center;
 }
 #backtomenu{
-	margin-top:15px;
+	margin-top:20px;
 	margin-left:20px;
 	float:left;
 }
 .arrow{
-	width:7vw;
-	height:4vh;
+	width:6vw;
+	height:3vh;
 	max-width:25px;
 }
 .infoarrow{
 	display:block;
-	margin:auto;
+	margin-top:20px;
 }
 #infotext{
 	margin-left:20px;
@@ -116,16 +116,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 #gpsbutton:hover{
 	background:#94db8a;
 	border-radius:20px;
-}
-#frequent{
-	display:none;
-	padding:15px;
-	width:90%;
-	background-color:white;
-}
-.fix{
-	display:block;
-	margin:auto;
 }
 .three{
 	width:33%;

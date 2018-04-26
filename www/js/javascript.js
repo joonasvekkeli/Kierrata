@@ -10,7 +10,6 @@
 		$("#main").show();
 		$("#legendbutton").delay("fast").fadeIn("fast");
 		$("#gpsbutton").delay("fast").fadeIn("fast");
-		$("#frequent").hide();
     });
     $("#materialbutton").click(function(){
         $("#info").delay("fast").fadeIn("fast");
@@ -22,7 +21,6 @@
 		$("#main").show();
 		$("#legendbutton").fadeOut("fast");
 		$("#gpsbutton").fadeOut("fast");
-		$("#frequent").hide();
     });
 // Infoscreen backbutton
 		$(".infoarrow").click(function(){
@@ -66,18 +64,6 @@
 	});
 	$(".exitToS").click(function(){
 		$("#terms").hide();
-		$("#main").fadeIn();
-		$("#mapid").css("z-index", "1");
-	});
-// FAQ
-		$("#faq").click(function(){
-		$("#frequent").slideDown("slow");
-        $("#sidebar").hide();
-		$("#main").hide();
-		$("#terms").hide();
-	});
-	$(".exitFre").click(function(){
-		$("#frequent").hide();
 		$("#main").fadeIn();
 		$("#mapid").css("z-index", "1");
 	});
